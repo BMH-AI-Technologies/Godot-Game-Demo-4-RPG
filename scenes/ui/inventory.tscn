@@ -1,0 +1,248 @@
+[gd_scene load_steps=7 format=3]
+[ext_resource type="Script" path="res://scripts/ui/inventory_ui.gd" id="1"]
+[ext_resource type="Theme" path="res://assets/ui/pixel_theme.tres" id="2"]
+[ext_resource type="AudioStream" path="res://assets/sounds/Heal.mp3" id="3_heal"]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/ui_sounds.tscn" id="ui_sounds"]
+[ext_resource type="AudioStream" path="res://assets/sounds/10_UI_Menu_SFX/070_Equip_10.wav" id="ui_equip"]
+[ext_resource type="AudioStream" path="res://assets/sounds/10_UI_Menu_SFX/071_Unequip_01.wav" id="ui_unequip"]
+
+[node name="Inventory" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2")
+script = ExtResource("1")
+
+[node name="Shade" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.055, 0.03, 0.76)
+
+
+[node name="Box" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 96.0
+offset_top = 60
+offset_right = 1824.0
+offset_bottom = 1020
+mouse_filter = 2
+
+
+[node name="Banner" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 128.0
+offset_top = 84
+offset_right = 1792.0
+offset_bottom = 174
+mouse_filter = 2
+theme_type_variation = &"WoodPanel"
+
+[node name="Title" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 168.0
+offset_top = 102
+offset_right = 1360.0
+offset_bottom = 153
+text = "HÀNH TRANG"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(1, 0.91, 0.70, 1)
+
+[node name="Close" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 1568.0
+offset_top = 102
+offset_right = 1760.0
+offset_bottom = 156
+text = "Đóng"
+focus_mode = 0
+
+
+[node name="BagLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 160.0
+offset_top = 200
+offset_right = 908.0
+offset_bottom = 237
+text = "VẬT PHẨM TRONG TÚI"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 21
+
+
+[node name="MemberLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 1024.0
+offset_top = 200
+offset_right = 1756.0
+offset_bottom = 237
+text = "TRANG BỊ CHO ĐỒNG ĐỘI"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 21
+
+
+[node name="Items" type="ItemList" parent="."]
+unique_name_in_owner = true
+offset_left = 160.0
+offset_top = 252
+offset_right = 956.0
+offset_bottom = 864
+fixed_icon_size = Vector2i(64, 64)
+icon_mode = 1
+theme_override_constants/v_separation = 10
+focus_mode = 0
+
+[node name="Members" type="OptionButton" parent="."]
+unique_name_in_owner = true
+offset_left = 1024.0
+offset_top = 252
+offset_right = 1760.0
+offset_bottom = 306
+focus_mode = 0
+
+[node name="MemberCard" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 1024.0
+offset_top = 327
+offset_right = 1760.0
+offset_bottom = 528
+mouse_filter = 2
+theme_type_variation = &"CardPanel"
+
+[node name="Portrait" type="TextureRect" parent="."]
+unique_name_in_owner = true
+offset_left = 1036.0
+offset_top = 348
+offset_right = 1164.0
+offset_bottom = 456
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+texture_filter = 1
+
+
+[node name="Stats" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 1192.0
+offset_top = 339
+offset_right = 1740.0
+offset_bottom = 519
+text = ""
+mouse_filter = 2
+theme_override_font_sizes/font_size = 24
+autowrap_mode = 2
+
+[node name="RemoveWeapon" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 1024.0
+offset_top = 549
+offset_right = 1372.0
+offset_bottom = 603
+text = "Cất vũ khí"
+focus_mode = 0
+
+
+[node name="RemoveArmor" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 1404.0
+offset_top = 549
+offset_right = 1760.0
+offset_bottom = 603
+text = "Cất giáp"
+focus_mode = 0
+
+
+[node name="ItemIcon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+offset_left = 1040.0
+offset_top = 639
+offset_right = 1136.0
+offset_bottom = 711
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+texture_filter = 1
+
+
+[node name="Description" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 1168.0
+offset_top = 627
+offset_right = 1752.0
+offset_bottom = 812
+text = ""
+mouse_filter = 2
+theme_override_font_sizes/font_size = 26
+autowrap_mode = 2
+
+[node name="Use" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 1024.0
+offset_top = 825
+offset_right = 1760.0
+offset_bottom = 885
+text = "Dùng vật phẩm"
+focus_mode = 0
+
+
+[node name="FeedbackBox" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 160.0
+offset_top = 915
+offset_right = 1760.0
+offset_bottom = 987
+mouse_filter = 2
+theme_type_variation = &"InsetPanel"
+
+[node name="Feedback" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 188.0
+offset_top = 926
+offset_right = 1732.0
+offset_bottom = 975
+text = ""
+mouse_filter = 2
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 2
+
+[node name="HealSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_heal")
+volume_db = -8.0
+
+
+[node name="UISounds" parent="." instance=ExtResource("ui_sounds")]
+
+[node name="EquipSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("ui_equip")
+volume_db = -14.0
+
+[node name="UnequipSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("ui_unequip")
+volume_db = -14.0
+
+[connection signal="healed" from="." to="HealSound" method="play"]
+
+[connection signal="opened" from="." to="UISounds/OpenSound" method="play"]
+
+[connection signal="closed" from="." to="UISounds/CloseSound" method="play"]
+
+[connection signal="denied" from="." to="UISounds/DeniedSound" method="play"]
+
+[connection signal="item_selected" from="Items" to="UISounds/ClickSound" method="play" unbinds=1]
+
+[connection signal="pressed" from="Members" to="UISounds/ClickSound" method="play"]
+
+[connection signal="item_selected" from="Members" to="UISounds/ClickSound" method="play" unbinds=1]
+
+[connection signal="equipped" from="." to="EquipSound" method="play"]
+
+[connection signal="unequipped" from="." to="UnequipSound" method="play"]

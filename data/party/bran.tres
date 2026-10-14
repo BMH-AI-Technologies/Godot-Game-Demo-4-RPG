@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PartyMember" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/party_member.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/icons/icon_3.tres" id="2"]
+
+[ext_resource type="SpriteFrames" path="res://assets/bran_frames.tres" id="3"]
+
+[resource]
+script = ExtResource("1")
+walk_frames = ExtResource("3")
+id = "bran"
+display_name = "Bran"
+max_hp = 48
+base_attack = 10
+base_defense = 3
+portrait = ExtResource("2")

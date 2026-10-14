@@ -1,0 +1,26 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/world/player.gd" id="1"]
+[ext_resource type="SpriteFrames" path="res://assets/athena_frames.tres" id="2"]
+[ext_resource type="Script" path="res://scripts/world/player_camera.gd" id="3"]
+[ext_resource type="AudioStream" path="res://assets/sounds/03_Step_grass_03.wav" id="4_step"]
+
+[node name="Player" type="Node2D" unique_id=2028482486]
+z_index = 3
+script = ExtResource("1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1087394011]
+sprite_frames = ExtResource("2")
+animation = &"down"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=67590568]
+process_priority = 100
+zoom = Vector2(3, 3)
+script = ExtResource("3")
+
+[node name="FootstepSound" type="AudioStreamPlayer" parent="." unique_id=1795456954]
+stream = ExtResource("4_step")
+volume_db = -16.0
+max_polyphony = 2
+
+[connection signal="step_finished" from="." to="FootstepSound" method="play"]

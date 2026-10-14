@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/items/equipment.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/icons/icon_9.tres" id="2"]
+
+[resource]
+script = ExtResource("1")
+id = "sword"
+item_name = "Kiếm sắt"
+description = "Vũ khí. Tăng 4 ATK khi trang bị."
+slot = "weapon"
+attack_bonus = 4
+icon = ExtResource("2")

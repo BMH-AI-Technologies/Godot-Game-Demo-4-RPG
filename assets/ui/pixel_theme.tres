@@ -1,0 +1,209 @@
+[gd_resource type="Theme" format=3 uid="uid://cmr6841e6uq8f"]
+
+[ext_resource type="Texture2D" uid="uid://b18pgdyokrvxl" path="res://assets/ui/parchment_frame.png" id="1"]
+[ext_resource type="FontFile" uid="uid://c0w6y1lc5yar1" path="res://assets/fonts/BeVietnamPro-Regular.ttf" id="Font"]
+
+[sub_resource type="StyleBoxFlat" id="ActiveCard"]
+content_margin_left = 15.0
+content_margin_top = 6.0
+content_margin_right = 15.0
+content_margin_bottom = 6.0
+bg_color = Color(0.91, 0.83, 0.59, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.31, 0.4, 0.19, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="Disabled"]
+content_margin_left = 15.0
+content_margin_top = 6.0
+content_margin_right = 15.0
+content_margin_bottom = 6.0
+bg_color = Color(0.48, 0.4, 0.29, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.57, 0.48, 0.33, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="Empty"]
+
+[sub_resource type="StyleBoxFlat" id="Hover"]
+content_margin_left = 15.0
+content_margin_top = 6.0
+content_margin_right = 15.0
+content_margin_bottom = 6.0
+bg_color = Color(0.42, 0.28, 0.14, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.93, 0.73, 0.34, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="Button"]
+content_margin_left = 15.0
+content_margin_top = 6.0
+content_margin_right = 15.0
+content_margin_bottom = 6.0
+bg_color = Color(0.3, 0.19, 0.105, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.63, 0.44, 0.22, 1)
+corner_detail = 1
+shadow_color = Color(0.13, 0.08, 0.04, 0.65)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="Pressed"]
+content_margin_left = 15.0
+content_margin_top = 6.0
+content_margin_right = 15.0
+content_margin_bottom = 6.0
+bg_color = Color(0.19, 0.26, 0.15, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.68, 0.36, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="Card"]
+content_margin_left = 15.0
+content_margin_top = 6.0
+content_margin_right = 15.0
+content_margin_bottom = 6.0
+bg_color = Color(0.84, 0.75, 0.54, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.66, 0.51, 0.29, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="Inset"]
+content_margin_left = 15.0
+content_margin_top = 6.0
+content_margin_right = 15.0
+content_margin_bottom = 6.0
+bg_color = Color(0.77, 0.66, 0.45, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.39, 0.21, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxTexture" id="Parchment"]
+content_margin_left = 33.0
+content_margin_top = 27.0
+content_margin_right = 33.0
+content_margin_bottom = 27.0
+texture = ExtResource("1")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxFlat" id="Wood"]
+content_margin_left = 15.0
+content_margin_top = 6.0
+content_margin_right = 15.0
+content_margin_bottom = 6.0
+bg_color = Color(0.2, 0.13, 0.085, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.59, 0.4, 0.19, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="HealthBack"]
+content_margin_left = 15.0
+content_margin_top = 6.0
+content_margin_right = 15.0
+content_margin_bottom = 6.0
+bg_color = Color(0.25, 0.17, 0.11, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.17, 0.11, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="HealthFill"]
+content_margin_left = 15.0
+content_margin_top = 6.0
+content_margin_right = 15.0
+content_margin_bottom = 6.0
+bg_color = Color(0.32, 0.47, 0.24, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.48, 0.62, 0.29, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[resource]
+default_font = ExtResource("Font")
+default_font_size = 27
+ActiveCard/base_type = &"Panel"
+ActiveCard/styles/panel = SubResource("ActiveCard")
+Button/colors/font_color = Color(1, 0.91, 0.7, 1)
+Button/colors/font_disabled_color = Color(0.72, 0.66, 0.54, 1)
+Button/colors/font_hover_color = Color(1, 0.97, 0.83, 1)
+Button/colors/font_pressed_color = Color(1, 0.97, 0.83, 1)
+Button/styles/disabled = SubResource("Disabled")
+Button/styles/focus = SubResource("Empty")
+Button/styles/hover = SubResource("Hover")
+Button/styles/normal = SubResource("Button")
+Button/styles/pressed = SubResource("Pressed")
+CardPanel/base_type = &"Panel"
+CardPanel/styles/panel = SubResource("Card")
+InsetPanel/base_type = &"Panel"
+InsetPanel/styles/panel = SubResource("Inset")
+ItemList/colors/font_color = Color(0.22, 0.14, 0.085, 1)
+ItemList/colors/font_selected_color = Color(1, 0.94, 0.76, 1)
+ItemList/constants/inner_item_margin_bottom = 8
+ItemList/constants/inner_item_margin_left = 10
+ItemList/constants/inner_item_margin_top = 8
+ItemList/styles/focus = SubResource("Empty")
+ItemList/styles/panel = SubResource("Inset")
+ItemList/styles/selected = SubResource("Pressed")
+ItemList/styles/selected_focus = SubResource("Pressed")
+Label/colors/font_color = Color(0.22, 0.14, 0.085, 1)
+Label/constants/line_spacing = 2
+OptionButton/colors/font_color = Color(1, 0.91, 0.7, 1)
+OptionButton/constants/arrow_margin = 10
+OptionButton/styles/focus = SubResource("Empty")
+OptionButton/styles/hover = SubResource("Hover")
+OptionButton/styles/normal = SubResource("Button")
+OptionButton/styles/pressed = SubResource("Pressed")
+Panel/styles/panel = SubResource("Parchment")
+PanelContainer/styles/panel = SubResource("Parchment")
+PopupMenu/colors/font_color = Color(1, 0.91, 0.7, 1)
+PopupMenu/colors/font_hover_color = Color(1, 0.97, 0.83, 1)
+PopupMenu/constants/v_separation = 12
+PopupMenu/styles/hover = SubResource("Hover")
+PopupMenu/styles/panel = SubResource("Wood")
+ProgressBar/styles/background = SubResource("HealthBack")
+ProgressBar/styles/fill = SubResource("HealthFill")
+WoodPanel/base_type = &"Panel"
+WoodPanel/styles/panel = SubResource("Wood")

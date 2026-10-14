@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxFlat" format=3]
+[resource]
+draw_center = false
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.32, 0.21, 0.12, 1)
+anti_aliasing = false

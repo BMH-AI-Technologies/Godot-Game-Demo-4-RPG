@@ -1,0 +1,287 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://scripts/ui/settings_ui.gd" id="1"]
+[ext_resource type="Theme" path="res://assets/ui/pixel_theme.tres" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ui_sounds.tscn" id="ui_sounds"]
+
+[node name="Settings" type="Control"]
+visible = false
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2")
+script = ExtResource("1")
+
+[node name="Shade" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.055, 0.03, 0.84)
+
+[node name="Box" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 320.0
+offset_top = 120
+offset_right = 1600.0
+offset_bottom = 975
+mouse_filter = 2
+
+
+[node name="Banner" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 352.0
+offset_top = 144
+offset_right = 1568.0
+offset_bottom = 234
+mouse_filter = 2
+theme_type_variation = &"WoodPanel"
+
+[node name="Title" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 392.0
+offset_top = 159
+offset_right = 1300.0
+offset_bottom = 219
+text = "CÀI ĐẶT"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(1, 0.91, 0.7, 1)
+
+[node name="Close" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 1356.0
+offset_top = 162
+offset_right = 1536.0
+offset_bottom = 216
+text = "Đóng"
+focus_mode = 0
+
+[node name="SoundHeading" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 384.0
+offset_top = 264
+offset_right = 1480.0
+offset_bottom = 306
+text = "ÂM THANH"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 24
+
+
+[node name="VolumeLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 384.0
+offset_top = 328
+offset_right = 712.0
+offset_bottom = 372
+text = "Âm lượng"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 27
+
+
+[node name="Volume" type="HSlider" parent="."]
+unique_name_in_owner = true
+offset_left = 740.0
+offset_top = 326
+offset_right = 1372.0
+offset_bottom = 374
+max_value = 100.0
+step = 1.0
+value = 80.0
+focus_mode = 0
+modulate = Color(0.90, 0.74, 0.48, 1)
+
+[node name="VolumeValue" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 1400.0
+offset_top = 327
+offset_right = 1536.0
+offset_bottom = 372
+text = "80%"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 2
+
+[node name="Mute" type="CheckButton" parent="."]
+unique_name_in_owner = true
+offset_left = 728.0
+offset_top = 394
+offset_right = 1536.0
+offset_bottom = 452
+text = "Tắt âm thanh"
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 0.91, 0.70, 1)
+
+[node name="DisplayHeading" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 384.0
+offset_top = 484
+offset_right = 1480.0
+offset_bottom = 526
+text = "MÀN HÌNH"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 24
+
+
+[node name="DisplayLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 384.0
+offset_top = 546
+offset_right = 700.0
+offset_bottom = 600
+text = "Chế độ"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 27
+
+
+[node name="DisplayMode" type="OptionButton" parent="."]
+unique_name_in_owner = true
+offset_left = 740.0
+offset_top = 540
+offset_right = 1536.0
+offset_bottom = 600
+focus_mode = 0
+
+[node name="ResolutionLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 384.0
+offset_top = 627
+offset_right = 724.0
+offset_bottom = 681
+text = "Độ phân giải cửa sổ"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 24
+
+
+[node name="Resolution" type="OptionButton" parent="."]
+unique_name_in_owner = true
+offset_left = 740.0
+offset_top = 621
+offset_right = 1536.0
+offset_bottom = 681
+focus_mode = 0
+
+[node name="DisplayHint" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 384.0
+offset_top = 706
+offset_right = 1536.0
+offset_bottom = 770
+text = ""
+mouse_filter = 2
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 2
+
+[node name="ResetBox" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 368.0
+offset_top = 800
+offset_right = 1552.0
+offset_bottom = 939
+mouse_filter = 2
+theme_type_variation = &"InsetPanel"
+
+[node name="ResetLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 400.0
+offset_top = 818
+offset_right = 1000.0
+offset_bottom = 910
+text = "Bắt đầu cuộc phiêu lưu mới.\nĐội, túi đồ và tiến trình sẽ đặt lại."
+mouse_filter = 2
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 2
+
+[node name="Reset" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 1044.0
+offset_top = 828
+offset_right = 1516.0
+offset_bottom = 900
+text = "Chơi lại từ đầu"
+focus_mode = 0
+
+[node name="Confirm" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+visible = false
+mouse_filter = 2
+
+[node name="Shade" type="ColorRect" parent="Confirm"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.055, 0.03, 0.84)
+
+[node name="Box" type="Panel" parent="Confirm"]
+offset_left = 440.0
+offset_top = 345
+offset_right = 1480.0
+offset_bottom = 735
+
+
+[node name="Question" type="Label" parent="Confirm"]
+unique_name_in_owner = true
+offset_left = 500.0
+offset_top = 387
+offset_right = 1420.0
+offset_bottom = 552
+text = "CHƠI LẠI TỪ ĐẦU?\nTiến trình hiện tại sẽ bị xóa.\nCài đặt âm thanh và màn hình được giữ lại."
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 27
+mouse_filter = 2
+
+[node name="CancelReset" type="Button" parent="Confirm"]
+unique_name_in_owner = true
+offset_left = 500.0
+offset_top = 612
+offset_right = 932.0
+offset_bottom = 682
+text = "Quay lại"
+focus_mode = 0
+
+[node name="ConfirmReset" type="Button" parent="Confirm"]
+unique_name_in_owner = true
+offset_left = 980.0
+offset_top = 612
+offset_right = 1420.0
+offset_bottom = 682
+text = "Bắt đầu lại"
+focus_mode = 0
+
+[node name="UISounds" parent="." instance=ExtResource("ui_sounds")]
+
+
+[connection signal="opened" from="." to="UISounds/OpenSound" method="play"]
+
+[connection signal="closed" from="." to="UISounds/CloseSound" method="play"]
+
+[connection signal="reset_cancelled" from="." to="UISounds/CloseSound" method="play"]
+
+[connection signal="pressed" from="Reset" to="UISounds/ClickSound" method="play"]
+
+[connection signal="pressed" from="Confirm/ConfirmReset" to="UISounds/ConfirmSound" method="play"]
+
+[connection signal="toggled" from="Mute" to="UISounds/ClickSound" method="play" unbinds=1]
+
+[connection signal="drag_ended" from="Volume" to="UISounds/ClickSound" method="play" unbinds=1]
+
+[connection signal="pressed" from="DisplayMode" to="UISounds/ClickSound" method="play"]
+
+[connection signal="item_selected" from="DisplayMode" to="UISounds/ClickSound" method="play" unbinds=1]
+
+[connection signal="pressed" from="Resolution" to="UISounds/ClickSound" method="play"]
+
+[connection signal="item_selected" from="Resolution" to="UISounds/ClickSound" method="play" unbinds=1]

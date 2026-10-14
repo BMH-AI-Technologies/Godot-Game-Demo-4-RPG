@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/world/party_walker.gd" id="1"]
+[ext_resource type="SpriteFrames" path="res://assets/athena_frames.tres" id="2"]
+[node name="Follower" type="Node2D"]
+script = ExtResource("1")
+z_index = 2
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2")
+animation = &"down"

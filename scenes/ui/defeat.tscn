@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://scripts/ui/defeat_ui.gd" id="1"]
+[ext_resource type="Theme" path="res://assets/ui/pixel_theme.tres" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ui_sounds.tscn" id="ui_sounds"]
+
+[node name="Defeat" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2")
+script = ExtResource("1")
+
+[node name="Shade" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.055, 0.03, 0.84)
+
+[node name="Box" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 400.0
+offset_top = 315
+offset_right = 1520.0
+offset_bottom = 789
+mouse_filter = 2
+
+
+[node name="Banner" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 432.0
+offset_top = 339
+offset_right = 1488.0
+offset_bottom = 423
+mouse_filter = 2
+theme_type_variation = &"WoodPanel"
+
+[node name="Title" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 476.0
+offset_top = 354
+offset_right = 1444.0
+offset_bottom = 406
+text = "ĐỘI ĐÃ GỤC"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 39
+theme_override_colors/font_color = Color(1, 0.91, 0.7, 1)
+horizontal_alignment = 1
+
+[node name="Message" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 468.0
+offset_top = 465
+offset_right = 1452.0
+offset_bottom = 630
+text = "Cuộc phiêu lưu chưa kết thúc.\nHồi sinh tại Làng Bình Minh với đầy HP.\nRương đã mở và trận đã thắng vẫn được giữ."
+mouse_filter = 2
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Respawn" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 664.0
+offset_top = 666
+offset_right = 1256.0
+offset_bottom = 741
+text = "Hồi sinh"
+focus_mode = 0
+
+[node name="UISounds" parent="." instance=ExtResource("ui_sounds")]
+
+
+[connection signal="pressed" from="Respawn" to="UISounds/ConfirmSound" method="play"]

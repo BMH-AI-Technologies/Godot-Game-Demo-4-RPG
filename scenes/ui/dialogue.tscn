@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://scripts/ui/dialogue_ui.gd" id="1"]
+[ext_resource type="Theme" path="res://assets/ui/pixel_theme.tres" id="2"]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/ui_sounds.tscn" id="ui_sounds"]
+
+[node name="Dialogue" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2")
+script = ExtResource("1")
+
+[node name="Shade" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+
+[node name="Box" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 144.0
+offset_top = 636
+offset_right = 1776.0
+offset_bottom = 1023
+mouse_filter = 2
+
+
+[node name="Nameplate" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 184.0
+offset_top = 657
+offset_right = 948.0
+offset_bottom = 722
+mouse_filter = 2
+theme_type_variation = &"WoodPanel"
+
+[node name="Speaker" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 216.0
+offset_top = 666
+offset_right = 928.0
+offset_bottom = 712
+text = "Người dân"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(1, 0.91, 0.70, 1)
+
+[node name="Page" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 1564.0
+offset_top = 668
+offset_right = 1720.0
+offset_bottom = 711
+text = "1 / 1"
+mouse_filter = 2
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+
+[node name="Message" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 208.0
+offset_top = 747
+offset_right = 1712.0
+offset_bottom = 894
+text = ""
+mouse_filter = 2
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 2
+
+[node name="Action" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 968.0
+offset_top = 927
+offset_right = 1440.0
+offset_bottom = 990
+text = "Mời vào đội"
+focus_mode = 0
+
+
+[node name="Next" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 1472.0
+offset_top = 927
+offset_right = 1720.0
+offset_bottom = 990
+text = "Tiếp"
+focus_mode = 0
+
+
+[node name="UISounds" parent="." instance=ExtResource("ui_sounds")]
+
+
+[connection signal="opened" from="." to="UISounds/ConfirmSound" method="play"]
+
+[connection signal="page_advanced" from="." to="UISounds/ClickSound" method="play"]
+
+[connection signal="closed" from="." to="UISounds/CloseSound" method="play"]
+
+[connection signal="pressed" from="Action" to="UISounds/ConfirmSound" method="play"]

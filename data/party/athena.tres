@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PartyMember" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/party_member.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/icons/icon_0.tres" id="2"]
+
+[ext_resource type="SpriteFrames" path="res://assets/athena_frames.tres" id="3"]
+
+[resource]
+script = ExtResource("1")
+walk_frames = ExtResource("3")
+id = "athena"
+display_name = "Athena"
+max_hp = 40
+base_attack = 9
+base_defense = 2
+portrait = ExtResource("2")

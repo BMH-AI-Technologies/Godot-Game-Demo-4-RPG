@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="AudioStream" path="res://assets/sounds/10_UI_Menu_SFX/8bit Click Sound Effect.mp3" id="1_click"]
+[ext_resource type="AudioStream" path="res://assets/sounds/10_UI_Menu_SFX/092_Pause_04.wav" id="2_open"]
+[ext_resource type="AudioStream" path="res://assets/sounds/10_UI_Menu_SFX/098_Unpause_04.wav" id="3_close"]
+[ext_resource type="AudioStream" path="res://assets/sounds/10_UI_Menu_SFX/013_Confirm_03.wav" id="4_confirm"]
+[ext_resource type="AudioStream" path="res://assets/sounds/10_UI_Menu_SFX/033_Denied_03.wav" id="5_denied"]
+
+[node name="UISounds" type="Node"]
+process_mode = 3
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_click")
+volume_db = -16.0
+
+[node name="OpenSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_open")
+volume_db = -14.0
+
+[node name="CloseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_close")
+volume_db = -14.0
+
+[node name="ConfirmSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_confirm")
+volume_db = -14.0
+
+[node name="DeniedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_denied")
+volume_db = -16.0

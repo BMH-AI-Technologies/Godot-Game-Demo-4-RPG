@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Script" path="res://scripts/ui/combat_effects.gd" id="1"]
+[ext_resource type="AudioStream" path="res://assets/sounds/07_human_atk_sword_2.wav" id="2_attack"]
+[ext_resource type="AudioStream" path="res://assets/sounds/10_human_special_atk_2.wav" id="3_enemy"]
+[ext_resource type="AudioStream" path="res://assets/sounds/22_Slash_04.wav" id="4_hit"]
+[ext_resource type="AudioStream" path="res://assets/sounds/Heal.mp3" id="5_heal"]
+[node name="CombatEffects" type="Control"]
+mouse_filter = 2
+script = ExtResource("1")
+[node name="Impact" type="TextureRect" parent="."]
+visible = false
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+offset_right = 84.0
+offset_bottom = 84.0
+pivot_offset = Vector2(42, 42)
+[node name="Number" type="Label" parent="."]
+visible = false
+mouse_filter = 2
+offset_right = 300.0
+offset_bottom = 64.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 39
+theme_override_colors/font_color = Color(1, 0.93, 0.70, 1)
+theme_override_colors/font_outline_color = Color(0.12, 0.08, 0.06, 1)
+theme_override_constants/outline_size = 6
+
+[node name="AllyAttackSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_attack")
+volume_db = -10.0
+
+[node name="EnemyAttackSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_enemy")
+volume_db = -12.0
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hit")
+volume_db = -14.0
+
+[node name="HealSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_heal")
+volume_db = -8.0
+
+[connection signal="ally_attack_started" from="." to="AllyAttackSound" method="play"]
+[connection signal="enemy_attack_started" from="." to="EnemyAttackSound" method="play"]
+[connection signal="hit_landed" from="." to="HitSound" method="play"]
+[connection signal="healed" from="." to="HealSound" method="play"]

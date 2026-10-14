@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3506dnmne6wy"
+path="res://.godot/imported/8bit Click Sound Effect.mp3-316e40aa040903e9100456a89b2444c6.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/10_UI_Menu_SFX/8bit Click Sound Effect.mp3"
+dest_files=["res://.godot/imported/8bit Click Sound Effect.mp3-316e40aa040903e9100456a89b2444c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

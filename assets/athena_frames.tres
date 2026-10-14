@@ -1,0 +1,154 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dkpfatthjik1m"]
+
+[ext_resource type="Texture2D" uid="uid://cbflgkt38xxq0" path="res://assets/athena_walk.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="Frame0_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 32, 34)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame0_1"]
+atlas = ExtResource("1")
+region = Rect2(32, 0, 32, 34)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame0_2"]
+atlas = ExtResource("1")
+region = Rect2(64, 0, 32, 34)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame0_3"]
+atlas = ExtResource("1")
+region = Rect2(96, 0, 32, 34)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame1_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 34, 32, 31)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame1_1"]
+atlas = ExtResource("1")
+region = Rect2(32, 34, 32, 31)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame1_2"]
+atlas = ExtResource("1")
+region = Rect2(64, 34, 32, 31)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame1_3"]
+atlas = ExtResource("1")
+region = Rect2(96, 34, 32, 31)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame2_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 65, 32, 31)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame2_1"]
+atlas = ExtResource("1")
+region = Rect2(32, 65, 32, 31)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame2_2"]
+atlas = ExtResource("1")
+region = Rect2(64, 65, 32, 31)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame2_3"]
+atlas = ExtResource("1")
+region = Rect2(96, 65, 32, 31)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame3_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 96, 32, 32)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame3_1"]
+atlas = ExtResource("1")
+region = Rect2(32, 96, 32, 32)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame3_2"]
+atlas = ExtResource("1")
+region = Rect2(64, 96, 32, 32)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Frame3_3"]
+atlas = ExtResource("1")
+region = Rect2(96, 96, 32, 32)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Frame0_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame0_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame0_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame0_3")
+}],
+"loop": 1,
+"name": &"down",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Frame1_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame1_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame1_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame1_3")
+}],
+"loop": 1,
+"name": &"left",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Frame2_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame2_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame2_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame2_3")
+}],
+"loop": 1,
+"name": &"right",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Frame3_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame3_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame3_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Frame3_3")
+}],
+"loop": 1,
+"name": &"up",
+"speed": 20.0
+}]
